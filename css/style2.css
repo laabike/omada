@@ -1,0 +1,1262 @@
+
+:root {
+  --primary-color: #336633;
+  --secondary-color: #448844;
+  --light-colour: #f2f2f2;
+  --dark-color: #262626;
+  --hover-color: #4d4d4d;
+  --price-color: #595959;
+  --max-width: 1280px;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* max-height: 2000px; */
+}
+
+body {
+  font-family: 'Montserrat Alternates', sans-serif;
+  line-height: 1.5;
+  background: var(--light-colour);
+}
+
+a {
+  text-decoration: none;
+  color: var(--dark-color);
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+/* Utility */
+.shop-nav-container {
+  width: 320px;
+  height: 1951px;
+  font-size: 16px;
+  background: #fff;
+  padding: 30px 50px;
+}
+
+.content {
+  position: relative;
+}
+
+.cat-container {
+  width: 200px;
+  height: 1960px;
+  /* position: absolute; */
+  position: relative;
+  /* top: 0; */
+  bottom: 1960px;
+  left: 320px;
+  font-size: 16px;
+  background: #f2f7fa;
+  padding: 95px 20px ;
+}
+
+.showcase-container {
+  width: 752px;
+  height: 1950px;
+  position: relative;
+  bottom: 3911px;
+  left: 519px;
+  padding: 90px 30px;
+  background: #ffffff;
+}
+
+.bf-container {
+  position: relative;
+  /* position: absolute; */
+  /* top: 1850px; */
+  bottom: 4000px;
+  left: 0;
+  width: 1271px;
+  height: 316px;
+  background: #444;
+  padding-top: 100px;
+}
+
+.footer-container {
+  position: relative;
+  /* position: absolute; */
+  /* top: 2165px; */
+  bottom: 4000px;
+  width: 1271px;
+  height: 285px;
+  background: #333333;
+}
+
+/* Navbar */
+#main-nav .shop-nav-container .nav-image {
+  padding-top: -5px;
+}
+
+#main-nav .shop-nav-container .navigate {
+ display: grid;
+ grid-template-rows: repeat(5, 50px);
+ margin-top: 80px;
+ margin-left: 15px;
+}
+
+#main-nav .shop-nav-container .navigate a {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#main-nav .shop-nav-container .navigate .shop-active {
+  margin-right: 150px;
+}
+
+#main-nav .shop-nav-container .navigate .shop-active::after {
+  content: '';
+  background: var(--primary-color);
+  position: absolute;
+  top: 260px;
+  left: 0px;
+  width: 45px;
+  height: 3px;
+  margin-top: 33px;
+  transition-duration: 500ms;
+  z-index: 10;
+}
+
+#main-nav .shop-nav-container .navigate .shop-active:hover {
+  color: var(--secondary-color);
+}
+
+#main-nav .shop-nav-container .navigate .shop-not-active1:after {
+  content: '';
+  background: var(--primary-color);
+  position: absolute;
+  top: 180px;
+  left: 0px;
+  width: 0; /*the width and the height actually created the line by the left, it doesn't show here because the width has been set to 0 */
+  height: 3px;
+  margin-top: 62.5px;
+  transition-duration: 500ms;
+  z-index: 10;
+}
+
+#main-nav .shop-nav-container .navigate .shop-not-active1:hover {
+  color: var(--secondary-color);
+}
+
+#main-nav .shop-nav-container .navigate .shop-not-active1:hover::after { /* the transition will only work when we hover on the element because the width has been set 45px */
+  width: 45px;
+  transition: width .5s;
+}
+
+#main-nav .shop-nav-container .navigate .not-active2:after {
+  content: '';
+  background: var(--primary-color);
+  position: absolute;
+  top: 280px;
+  left: 0px;
+  width: 0; /*the width and the height actually created the line by the left, it doesn't show here because the width has been set to 0 */
+  height: 3px;
+  margin-top: 62.5px;
+  transition-duration: 500ms;
+  z-index: 10;
+}
+
+#main-nav .shop-nav-container .navigate .not-active2:hover {
+  color: var(--secondary-color);
+}
+
+#main-nav .shop-nav-container .navigate .not-active2:hover::after { /* the transition will only work when we hover on the element because the width has been set 45px */
+  width: 45px;
+  transition: width .5s;
+}
+
+#main-nav .shop-nav-container .navigate .not-active3:after {
+  content: '';
+  background: var(--primary-color);
+  position: absolute;
+  top: 330px;
+  left: 0px;
+  width: 0; /*the width and the height actually created the line by the left, it doesn't show here because the width has been set to 0 */
+  height: 3px;
+  margin-top: 62.5px;
+  transition-duration: 500ms;
+  z-index: 10;
+}
+
+#main-nav .shop-nav-container .navigate .not-active3:hover {
+  color: var(--secondary-color);
+}
+
+#main-nav .shop-nav-container .navigate .not-active3:hover::after { /* the transition will only work when we hover on the element because the width has been set 45px */
+  width: 45px;
+  transition: width .5s;
+}
+
+#main-nav .shop-nav-container .navigate .not-active4:after {
+  content: '';
+  background: var(--primary-color);
+  position: absolute;
+  top: 380px;
+  left: 0px;
+  width: 0; /*the width and the height actually created the line by the left, it doesn't show here because the width has been set to 0 */
+  height: 3px;
+  margin-top: 62.5px;
+  transition-duration: 500ms;
+  z-index: 10;
+}
+
+#main-nav .shop-nav-container .navigate .not-active4:hover {
+  color: var(--secondary-color);
+}
+
+#main-nav .shop-nav-container .navigate .not-active4:hover::after { /* the transition will only work when we hover on the element because the width has been set 45px */
+  width: 45px;
+  transition: width .5s;
+}
+
+#main-nav .shop-nav-container .navigate .nav-dis {
+  background:var(--primary-color);
+  margin: 15px 70px 13px 0px;
+  padding: 15px 30px 15px 30px;
+  color: var(--light-colour);
+  text-align: center;
+  text-transform: none;
+  font-size: 18px; 
+}
+
+#main-nav .shop-nav-container .navigate .nav-dis:hover {
+  background: var(--dark-color);
+}
+
+#main-nav .shop-nav-container .navigate .nav-new {
+  background:var(--dark-color);
+  margin: 3px 70px 60px 0px;
+  padding: 15px 15px 15px 15px;
+  color: var(--light-colour);
+  text-align: center;
+  text-transform: none;
+  font-size: 18px; 
+}
+
+#main-nav .shop-nav-container .navigate .side-nav {
+  display: grid;
+  grid-template-rows: repeat(3, 50px);
+  margin-top: 60px;
+}
+
+#main-nav .shop-nav-container .navigate .side-nav i {
+  font-size: 18px;
+  margin-right: 8px;
+  color: #b3b3b3;
+}
+
+#main-nav .shop-nav-container .navigate .side-nav a:hover {
+  color: var(--secondary-color);
+}
+
+#main-nav .shop-nav-container .navigate .side-nav span {
+  color: #b3b3b3;
+}
+
+#main-nav .shop-nav-container .navigate .side-nav .nav-search i{
+  transform: rotate(90deg);
+}
+
+#main-nav .shop-nav-container .navigate .social {
+  margin-top: 80px;
+}
+
+#main-nav .shop-nav-container .navigate .social i {
+  color: #b3b3b3;
+  font-size: 17px;
+  padding-right: 40px;
+}
+
+#main-nav .shop-nav-container .navigate .social i:hover {
+  color: var(--secondary-color);
+}
+
+/* Categories Section */
+.cat-container .cat-main-content h3 {
+  font-size: 20px;
+  padding-bottom: 50px;
+}
+
+.cat-container .cat-main-content ul {
+  margin-left: 23px;
+}
+
+.cat-container .cat-main-content ul li {
+  padding-bottom: 31px;
+}
+
+.cat-container .cat-main-content ul li a {
+  color: #595959;
+}
+
+.cat-container .cat-main-content ul li .active {
+  color: var(--secondary-color);
+}
+
+.cat-container .cat-main-content ul li .not-active:hover {
+  color: var(--secondary-color);
+}
+
+/* Brands */
+.cat-container .content h3{
+  padding-bottom: 30px;
+}
+/* Customising the label container */
+/* The container */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background: #eee;
+  border-radius: 5px;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 7px;
+  top: 3px;
+  width: 4px;
+  height: 9px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.container:hover {
+  color: var(--secondary-color);
+}
+
+/* Color */
+.cat-container .color-content h3{
+  padding: 30px 0 20px 0;
+}
+
+/* The container */
+.radio-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.radio-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.radio-container .checkmark1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 33px;
+  width: 33px;
+  border-radius: 50%;
+}
+
+/* When the radio button is checked, add a blue background */
+.radio-container input:checked ~ .checkmark1 {
+  background: #cc66ff;
+}
+
+/* Create a custom radio button */
+.radio-container .checkmark2 {
+  position: absolute;
+  top: -12px;
+  left: 40px;
+  height: 33px;
+  width: 33px;
+  border-radius: 50%;
+}
+
+/* When the radio button is checked, add a blue background */
+.radio-container input:checked ~ .checkmark2 {
+  background: #00ff99;
+}
+
+.radio-container .checkmark3 {
+  position: absolute;
+  top: -12px;
+  left: 80px;
+  height: 33px;
+  width: 33px;
+  border-radius: 50%;
+}
+
+/* When the radio button is checked, add a blue background */
+.radio-container input:checked ~ .checkmark3 {
+  background: #ffff99;
+  /* border: 1px black solid; */
+}
+
+.radio-container .checkmark4 {
+  position: absolute;
+  top: -11px;
+  left: 120px;
+  height: 33px;
+  width: 33px;
+  border-radius: 50%;
+}
+
+/* When the radio button is checked, add a blue background */
+.radio-container input:checked ~ .checkmark4 {
+  background: #6d6d6d;
+}
+
+.radio-container .checkmark5 {
+  position: absolute;
+  top: 30px;
+  left: 0px;
+  height: 33px;
+  width: 33px;
+  border-radius: 50%;
+}
+
+/* When the radio button is checked, add a blue background */
+.radio-container input:checked ~ .checkmark5 {
+  background: #1a1a1a;
+}
+
+.radio-container .checkmark6 {
+  position: absolute;
+  top: 30px;
+  left: 40px;
+  height: 33px;
+  width: 33px;
+  border-radius: 50%;
+} 
+
+/* When the radio button is checked, add a blue background */
+.radio-container input:checked ~ .checkmark6 {
+  background: #ff6600;
+}
+
+.radio-container .checkmark7 {
+  position: absolute;
+  top: 30px;
+  left: 80px;
+  height: 33px;
+  width: 33px;
+  border-radius: 50%;
+}
+
+/* When the radio button is checked, add a blue background */
+.radio-container input:checked ~ .checkmark7 {
+  background: #ff0000;
+}
+
+.radio-container .checkmark8 {
+  position: absolute;
+  top: 31px;
+  left: 120px;
+  height: 33px;
+  width: 33px;
+  border-radius: 50%;
+}
+
+/* When the radio button is checked, add a blue background */
+.radio-container input:checked ~ .checkmark8 {
+  background: #00ccff;
+}
+
+/* Showcase */
+.showcase-container .showcase-left h3 {
+  text-transform: uppercase;
+  font-size: 18px;
+  padding-bottom: 20px ;
+}
+
+.showcase-container .showcase-up {
+  display: flex;
+  flex-direction: row;
+}
+
+.showcase-container .showcase-left .th {
+  padding: 10px 12px;
+  background: var(--primary-color);
+  color: #fff;
+  font-size: 18px;
+}
+
+.showcase-container .showcase-left .bars {
+  margin-left: -5px;
+  padding: 10px 12px;
+  background: var(--dark-color);
+  color: #fff;
+  font-size: 18px;
+}
+
+/* Right-side */
+.showcase-container .showcase-right .dropdown {
+  position: relative;
+  display: inline-block;
+  top: 44px;
+  left: 230px;
+  font-size: 18px;
+}
+
+/* to remove the original checkbox */
+.showcase-container .showcase-right .dropdown > input[type="checkbox"] {
+  position: absolute;
+  display: none;
+}
+
+.showcase-container .showcase-right .dropdown > label,
+.showcase-container .showcase-right .dropdown > a[role="button"] {
+  display: inline-block;
+  padding: 6px 15px;
+  background: #f2f7fa;
+  color: #595959;
+  line-height: 1.5em;
+  text-decoration: none;
+  cursor: text;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+/* What acts as the toggle */
+.showcase-container .showcase-right .dropdown > label:after,
+.showcase-container .showcase-right .dropdown > a[role="button"]:after {
+  content: "\f107";
+  font-family: FontAwesome;
+  display: inline-block;
+  margin-left: 6px;
+  cursor: pointer;
+}
+
+/* to send the contents of the ul outside of the webpage visible to viewers */
+.showcase-container .showcase-right .dropdown > ul {
+  position: absolute;
+  z-index: 999;
+  display: block;
+  left: -150vw;
+  top: calc(1.5em + 18px);
+  font-size: 13px;
+  background: #f6f6f6;
+  padding: 6px 0;
+  margin: 0;
+  list-style: none;
+  width: 100%;
+  border: 2px rgba(26, 26, 26, 0.5) solid;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.showcase-container .showcase-right .dropdown > ul a {
+  display: block;
+  padding: 6px 15px;
+  text-decoration: none;
+}
+
+.showcase-container .showcase-right .dropdown > ul a:hover,
+.showcase-container .showcase-right .dropdown > ul a:focus {
+  color: var(--secondary-color);
+}
+
+.showcase-container .showcase-right .dropdown > input[type="checkbox"]:checked ~ ul,
+.showcase-container .showcase-right .dropdown > ul:target {
+  left: 0;
+}
+
+.showcase-container .showcase-right .dropdown > [type="checkbox"]:checked + label:after,
+.showcase-container .showcase-right .dropdown > ul:target ~ a:after {
+  content: "\f0d8";
+}
+
+.showcase-container .showcase-right .dropdown a.close {
+  display: none;
+}
+
+.showcase-container .showcase-right .dropdown > ul:target ~ a.close {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  text-indent: -100vw;
+  z-index: 1000;
+} 
+
+/* View */
+.showcase-container .showcase-right .dropdown2 {
+  position: relative;
+  display: inline-block;
+  top: 44px;
+  left: 250px;
+  font-size: 18px;
+}
+
+/* to remove the original checkbox */
+.showcase-container .showcase-right .dropdown2 > input[type="checkbox"] {
+  position: absolute;
+  display: none;
+}
+
+.showcase-container .showcase-right .dropdown2 > label,
+.showcase-container .showcase-right .dropdown2 > a[role="button"] {
+  display: inline-block;
+  padding: 6px 15px;
+  background: #f2f7fa;
+  color: #595959;
+  line-height: 1.5em;
+  text-decoration: none;
+  cursor: text;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+/* What acts as the toggle */
+.showcase-container .showcase-right .dropdown2 > label:after,
+.showcase-container .showcase-right .dropdown2 > a[role="button"]:after {
+  content: "\f107";
+  font-family: FontAwesome;
+  display: inline-block;
+  margin-left: 6px;
+  cursor: pointer;
+}
+
+/* to send the contents of the ul outside of the webpage visible to viewers */
+.showcase-container .showcase-right .dropdown2 > ul {
+  position: absolute;
+  z-index: 999;
+  display: block;
+  left: -170vw;
+  top: calc(1.5em + 18px);
+  font-size: 13px;
+  background: #f6f6f6;
+  padding: 6px 0;
+  margin: 0;
+  list-style: none;
+  width: 100%;
+  border: 2px rgba(26, 26, 26, 0.5) solid;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.showcase-container .showcase-right .dropdown2 > ul a {
+  display: block;
+  padding: 6px 15px;
+  text-decoration: none;
+}
+
+.showcase-container .showcase-right .dropdown2 > ul a:hover,
+.showcase-container .showcase-right .dropdown2 > ul a:focus {
+  color: var(--secondary-color);
+}
+
+.showcase-container .showcase-right .dropdown2 > input[type="checkbox"]:checked ~ ul,
+.showcase-container .showcase-right .dropdown2 > ul:target {
+  left: 0;
+}
+
+.showcase-container .showcase-right .dropdown2 > [type="checkbox"]:checked + label:after,
+.showcase-container .showcase-right .dropdown2 > ul:target ~ a:after {
+  content: "\f0d8";
+}
+
+.showcase-container .showcase-right .dropdown2 a.close {
+  display: none;
+}
+
+.showcase-container .showcase-right .dropdown2 > ul:target ~ a.close {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  text-indent: -100vw;
+  z-index: 1000;
+} 
+
+/* Showcase Content */
+.showcase-container .showcase-content {
+  position: absolute;
+  top: 200px;
+  display: grid;
+  grid-template-columns: 375px 375px;
+}
+
+.showcase-container .showcase-content img {
+  width: 325px;
+  height: 386.15px;
+} 
+
+.showcase-container .showcase-content .showcase-content1 h4 {
+  position: absolute;
+  top: 390px;
+  left: 10px;
+  margin-top: 10px;
+  border-top: 3px var(--secondary-color) solid;
+  font-size: 25px;
+  color: var(--secondary-color);
+}
+
+.showcase-container .showcase-content .showcase-content1 p {
+  position: absolute;
+  top: 425px;
+  left: 10px;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.showcase-container .showcase-content .showcase-content1 p:hover {
+  cursor: pointer;
+}
+
+.showcase-container .showcase-content .showcase-content1 .content1{
+  position: absolute;
+  left: 246px;
+  padding-top: 8px;
+  font-size: 11px;
+  color: var(--secondary-color);
+}
+
+.showcase-container .showcase-content .showcase-content1 span {
+  position: absolute;
+  top: 423px;
+  left: 298px;
+  font-size: 20px;
+  color: #999;
+}
+
+.showcase-container .showcase-content .showcase-content1 h5 {
+  visibility: hidden;
+  width: 83px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: 416px;
+  left: 213px;
+  margin-top: 5px;
+}
+
+.showcase-container .showcase-content .showcase-content1:hover h5 {
+  visibility: visible;
+}
+
+.showcase-container .showcase-content .showcase-content1:hover {
+  cursor: pointer;
+}
+
+.showcase-container .showcase-content .showcase-content2 h4 {
+  position: absolute;
+  top: 390px;
+  left: 387px;
+  margin-top: 10px;
+  border-top: 3px var(--secondary-color) solid;
+  font-size: 25px;
+  color: var(--secondary-color);
+}
+  
+.showcase-container .showcase-content .showcase-content2 p {
+  position: absolute;
+  top: 425px;
+  left: 387px;
+  margin-top: 10px;
+  font-size: 16px;
+}
+  
+.showcase-container .showcase-content .showcase-content2 p:hover {
+  cursor: pointer;
+}
+  
+.showcase-container .showcase-content .showcase-content2 .content2{
+  position: absolute;
+  left: 620px;
+  padding-top: 8px;
+  font-size: 11px;
+  color: var(--secondary-color);
+}
+  
+.showcase-container .showcase-content .showcase-content2 span {
+  position: absolute;
+  top: 423px;
+  left: 669px;
+  font-size: 20px;
+  color: #999;
+}
+  
+.showcase-container .showcase-content .showcase-content2 h5 {
+  visibility: hidden;
+  width: 83px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: 416px;
+  left: 580px;
+  margin-top: 5px;
+}
+  
+.showcase-container .showcase-content .showcase-content2:hover h5 {
+  visibility: visible;
+}
+  
+.showcase-container .showcase-content .showcase-content2:hover {
+  cursor: pointer;
+}
+
+.showcase-container .showcase-content .showcase-content3 {
+  margin-top: 100px;
+}
+
+.showcase-container .showcase-content .showcase-content3 h4 {
+  position: absolute;
+  top: 880px;
+  left: 10px;
+  margin-top: 10px;
+  border-top: 3px var(--secondary-color) solid;
+  font-size: 25px;
+  color: var(--secondary-color);
+}
+    
+.showcase-container .showcase-content .showcase-content3 p {
+  position: absolute;
+  top: 915px;
+  left: 10px;
+  margin-top: 10px;
+  font-size: 16px;
+}
+    
+.showcase-container .showcase-content .showcase-content3 p:hover {
+  cursor: pointer;
+}
+    
+.showcase-container .showcase-content .showcase-content3 .content3{
+  position: absolute;
+  left: 246px;
+  padding-top: 8px;
+  font-size: 11px;
+  color: var(--secondary-color);
+}
+    
+.showcase-container .showcase-content .showcase-content3 span {
+  position: absolute;
+  top: 915px;
+  left: 298px;
+  font-size: 20px;
+  color: #999;
+}
+    
+.showcase-container .showcase-content .showcase-content3 h5 {
+  visibility: hidden;
+  width: 83px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+    
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: 913px;
+  left: 212px;
+  margin-top: 3px;
+}
+    
+.showcase-container .showcase-content .showcase-content3:hover h5 {
+  visibility: visible;
+}
+    
+.showcase-container .showcase-content .showcase-content3:hover {
+  cursor: pointer;
+}
+
+.showcase-container .showcase-content .showcase-content4 {
+  margin-top: 100px;
+}
+
+.showcase-container .showcase-content .showcase-content4 h4 {
+  position: absolute;
+  top: 880px;
+  left: 387px;
+  margin-top: 10px;
+  border-top: 3px var(--secondary-color) solid;
+  font-size: 25px;
+  color: var(--secondary-color);
+}
+  
+.showcase-container .showcase-content .showcase-content4 p {
+  position: absolute;
+  top: 915px;
+  left: 387px;
+  margin-top: 10px;
+  font-size: 16px;
+}
+  
+.showcase-container .showcase-content .showcase-content4 p:hover {
+  cursor: pointer;
+}
+  
+.showcase-container .showcase-content .showcase-content4 .content4 {
+  position: absolute;
+  left: 620px;
+  padding-top: 8px;
+  font-size: 11px;
+  color: var(--secondary-color);
+}
+  
+.showcase-container .showcase-content .showcase-content4 span {
+  position: absolute;
+  top: 915px;
+  left: 669px;
+  font-size: 20px;
+  color: #999;
+}
+  
+.showcase-container .showcase-content .showcase-content4 h5 {
+  visibility: hidden;
+  width: 83px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: 913px;
+  left: 580px;
+  margin-top: 5px;
+}
+  
+.showcase-container .showcase-content .showcase-content4:hover h5 {
+  visibility: visible;
+}
+  
+.showcase-container .showcase-content .showcase-content4:hover {
+  cursor: pointer;
+}
+
+.showcase-container .showcase-content .showcase-content5 {
+  margin-top: 100px;
+}
+
+.showcase-container .showcase-content .showcase-content5 h4 {
+  position: absolute;
+  top: 1390px;
+  left: 10px;
+  margin-top: 10px;
+  border-top: 3px var(--secondary-color) solid;
+  font-size: 25px;
+  color: var(--secondary-color);
+}
+    
+.showcase-container .showcase-content .showcase-content5 p {
+  position: absolute;
+  top: 1424px;
+  left: 10px;
+  margin-top: 10px;
+  font-size: 16px;
+}
+    
+.showcase-container .showcase-content .showcase-content5 p:hover {
+  cursor: pointer;
+}
+    
+.showcase-container .showcase-content .showcase-content5 .content5{
+  position: absolute;
+  left: 246px;
+  padding-top: 20px;
+  font-size: 11px;
+  color: var(--secondary-color);
+}
+    
+.showcase-container .showcase-content .showcase-content5 span {
+  position: absolute;
+  top: 1423px;
+  left: 298px;
+  font-size: 20px;
+  color: #999;
+}
+    
+.showcase-container .showcase-content .showcase-content5 h5 {
+  visibility: hidden;
+  width: 83px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+    
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: 1422px;
+  left: 212px;
+  margin-top: 3px;
+}
+    
+.showcase-container .showcase-content .showcase-content5:hover h5 {
+  visibility: visible;
+}
+    
+.showcase-container .showcase-content .showcase-content5:hover {
+  cursor: pointer;
+}
+
+.showcase-container .showcase-content .showcase-content6 {
+  margin-top: 100px;
+}
+
+.showcase-container .showcase-content .showcase-content6 h4 {
+  position: absolute;
+  top: 1390px;
+  left: 387px;
+  margin-top: 10px;
+  border-top: 3px var(--secondary-color) solid;
+  font-size: 25px;
+  color: var(--secondary-color);
+}
+  
+.showcase-container .showcase-content .showcase-content6 p {
+  position: absolute;
+  top: 1427px;
+  left: 387px;
+  margin-top: 10px;
+  font-size: 16px;
+}
+  
+.showcase-container .showcase-content .showcase-content6 p:hover {
+  cursor: pointer;
+}
+  
+.showcase-container .showcase-content .showcase-content6 .content6 {
+  position: absolute;
+  left: 620px;
+  padding-top: 20px;
+  font-size: 11px;
+  color: var(--secondary-color);
+}
+  
+.showcase-container .showcase-content .showcase-content6 span {
+  position: absolute;
+  top: 1423px;
+  left: 669px;
+  font-size: 20px;
+  color: #999;
+}
+  
+.showcase-container .showcase-content .showcase-content6 h5 {
+  visibility: hidden;
+  width: 83px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: 1422px;
+  left: 580px;
+  margin-top: 5px;
+}
+  
+.showcase-container .showcase-content .showcase-content6:hover h5 {
+  visibility: visible;
+}
+  
+.showcase-container .showcase-content .showcase-content6:hover {
+  cursor: pointer;
+}
+
+/* Pages section */
+.showcase-container .pages-sec {
+  position: relative;
+  bottom: -1620px;
+  right: -490px;
+}
+
+.showcase-container .pages-sec ul {
+  display: flex;
+  flex-direction: row;
+}
+
+.showcase-container .pages-sec ul li a {
+  padding: 8px 6px;
+}
+
+.showcase-container .pages-sec ul li .active {
+background: var(--primary-color);
+color: var(--light-colour);
+}
+
+.showcase-container .pages-sec ul li .not-active:hover {
+  background: var(--primary-color);
+  color: var(--light-colour);
+  }
+
+/* Before Footer */
+.bf-container .bf-content {
+  display: grid;
+  grid-template-columns: 750px 200px;
+}
+
+.bf-container .bf-content .bf-text {
+  margin: 0 80px;
+  color: var(--light-colour);
+}
+
+.bf-container .bf-content .bf-text h3 {
+  font-size: 35px;
+  margin: 0 0 10px;
+}
+
+.bf-container .bf-content .bf-text h3 span {
+  color: var(--secondary-color);
+}
+
+.bf-container .bf-content .bf-input input[type='email'] {
+  position: absolute;
+  top: 130px;
+  width: 405px;
+  height: 50px;
+  font-size: 14px;
+  font-style: italic;
+  padding: 0 30px;
+}
+
+.bf-container .bf-content .bf-input input[type='submit'] {
+  position: absolute;
+  top: 130px;
+  right: 115px;
+  font-size: 14px;
+  padding: 17px 35px 14px 35px;
+  background: var(--primary-color);
+  border: 1px var(--primary-color) solid;
+  color: var(--light-colour);
+  cursor: pointer;
+  z-index: 1px;
+}
+
+.footer-container .footer-content {
+  width: 1140px;
+  height: 130px;
+  display: grid;
+  grid-template-columns: 500px 550px ;
+  grid-gap: 2rem;
+}
+
+.footer-container .footer-content .footer1 {
+  margin-left: 110px;
+  margin-top: 30px;
+}
+
+.footer-container .footer-content .footer1 img {
+  width: 307px;
+  height: 175px;
+}
+
+.footer-container .footer-content .footer1 h3 {
+  padding-left: 28px;
+  margin-top: -30px;
+  color: #ccc;
+  font-size: 12px;
+}
+
+.footer-container .footer-content .footer-nav {
+  padding: 130px 0;
+  text-transform: uppercase;
+}
+
+.footer-container .footer-content .footer-nav a {
+  text-align: center;
+  color: var(--light-colour);
+  margin-top: 65px;
+  padding: 30px 20px;
+}
+
+.footer-container .footer-content .footer-nav a:hover {
+  color: var(--secondary-color);
+}
+

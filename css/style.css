@@ -1,0 +1,659 @@
+:root {
+  --primary-color: #336633;
+  --secondary-color: #448844;
+  --light-colour: #f2f2f2;
+  --dark-color: #262626;
+  --hover-color: #4d4d4d;
+  --price-color: #595959;
+  --max-width: 1280px;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat Alternates', sans-serif;
+  line-height: 1.5;
+  background: var(--light-colour);
+}
+
+a {
+  text-decoration: none;
+  color: var(--dark-color);
+}
+
+img {
+  width: 100%;
+}
+
+/* Utility */
+.nav-container {
+  width: 320px;
+  height: 1051px;
+  font-size: 16px;
+  background: #fff;
+  padding: 25px 50px;
+}
+
+.sec-container {
+  width: 960px;
+  height: 1051px;
+  position: absolute;
+  background: var(--light-colour);
+  top: 0px;
+  left: 320px;
+}
+
+.bf-container {
+  position: relative;
+  width: 1280px;
+  height: 316px;
+  background: #444;
+  padding-top: 100px;
+}
+
+.footer-container {
+  width: var(--max-width);
+  height: 285px;
+  background: #333333;
+}
+
+/* Navbar */
+#main-nav .nav-container .nav-image {
+  padding-top: -5px;
+}
+
+#main-nav .nav-container .navigate {
+ display: grid;
+ grid-template-rows: repeat(5, 50px);
+ margin-top: 80px;
+ margin-left: 15px;
+}
+
+#main-nav .nav-container .navigate a {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#main-nav .nav-container .navigate .active {
+  margin-right: 150px;
+}
+
+#main-nav .nav-container .navigate .active::after {
+  content: '';
+  background: var(--primary-color);
+  position: absolute;
+  top: 210px;
+  left: 0px;
+  width: 45px;
+  height: 3px;
+  margin-top: 33px;
+  transition-duration: 500ms;
+  z-index: 10;
+}
+
+#main-nav .nav-container .navigate .active:hover {
+  color: var(--secondary-color);
+}
+
+#main-nav .nav-container .navigate .not-active1:after {
+  content: '';
+  background: var(--primary-color);
+  position: absolute;
+  top: 230px;
+  left: 0px;
+  width: 0; /*the width and the height actually created the line by the left, it doesn't show here because the width has been set to 0 */
+  height: 3px;
+  margin-top: 62.5px;
+  transition-duration: 500ms;
+  z-index: 10;
+}
+
+#main-nav .nav-container .navigate .not-active1:hover {
+  color: var(--secondary-color);
+}
+
+#main-nav .nav-container .navigate .not-active1:hover::after { /* the transition will only work when we hover on the element because the width has been set 45px */
+  width: 45px;
+  transition: width .5s;
+}
+
+#main-nav .nav-container .navigate .not-active2:after {
+  content: '';
+  background: var(--primary-color);
+  position: absolute;
+  top: 280px;
+  left: 0px;
+  width: 0; /*the width and the height actually created the line by the left, it doesn't show here because the width has been set to 0 */
+  height: 3px;
+  margin-top: 62.5px;
+  transition-duration: 500ms;
+  z-index: 10;
+}
+
+#main-nav .nav-container .navigate .not-active2:hover {
+  color: var(--secondary-color);
+}
+
+#main-nav .nav-container .navigate .not-active2:hover::after { /* the transition will only work when we hover on the element because the width has been set 45px */
+  width: 45px;
+  transition: width .5s;
+}
+
+#main-nav .nav-container .navigate .not-active3:after {
+  content: '';
+  background: var(--primary-color);
+  position: absolute;
+  top: 330px;
+  left: 0px;
+  width: 0; /*the width and the height actually created the line by the left, it doesn't show here because the width has been set to 0 */
+  height: 3px;
+  margin-top: 62.5px;
+  transition-duration: 500ms;
+  z-index: 10;
+}
+
+#main-nav .nav-container .navigate .not-active3:hover {
+  color: var(--secondary-color);
+}
+
+#main-nav .nav-container .navigate .not-active3:hover::after { /* the transition will only work when we hover on the element because the width has been set 45px */
+  width: 45px;
+  transition: width .5s;
+}
+
+#main-nav .nav-container .navigate .not-active4:after {
+  content: '';
+  background: var(--primary-color);
+  position: absolute;
+  top: 380px;
+  left: 0px;
+  width: 0; /*the width and the height actually created the line by the left, it doesn't show here because the width has been set to 0 */
+  height: 3px;
+  margin-top: 62.5px;
+  transition-duration: 500ms;
+  z-index: 10;
+}
+
+#main-nav .nav-container .navigate .not-active4:hover {
+  color: var(--secondary-color);
+}
+
+#main-nav .nav-container .navigate .not-active4:hover::after { /* the transition will only work when we hover on the element because the width has been set 45px */
+  width: 45px;
+  transition: width .5s;
+}
+
+#main-nav .nav-container .navigate .nav-dis {
+  background:var(--primary-color);
+  margin: 15px 70px 13px 0px;
+  padding: 15px 30px 15px 30px;
+  color: var(--light-colour);
+  text-align: center;
+  text-transform: none;
+  font-size: 18px; 
+}
+
+#main-nav .nav-container .navigate .nav-dis:hover {
+  background: var(--dark-color);
+}
+
+#main-nav .nav-container .navigate .nav-new {
+  background:var(--dark-color);
+  margin: 3px 70px 60px 0px;
+  padding: 15px 15px 15px 15px;
+  color: var(--light-colour);
+  text-align: center;
+  text-transform: none;
+  font-size: 18px; 
+}
+
+#main-nav .nav-container .navigate .side-nav {
+  display: grid;
+  grid-template-rows: repeat(3, 50px);
+  margin-top: 60px;
+}
+
+#main-nav .nav-container .navigate .side-nav i {
+  font-size: 18px;
+  margin-right: 8px;
+  color: #b3b3b3;
+}
+
+#main-nav .nav-container .navigate .side-nav a:hover {
+  color: var(--secondary-color);
+}
+
+#main-nav .nav-container .navigate .side-nav span {
+  color: #b3b3b3;
+}
+
+#main-nav .nav-container .navigate .side-nav .nav-search i{
+  transform: rotate(90deg);
+}
+
+#main-nav .nav-container .navigate .social {
+  margin-top: 80px;
+}
+
+#main-nav .nav-container .navigate .social i {
+  color: #b3b3b3;
+  font-size: 17px;
+  padding-right: 40px;
+}
+
+#main-nav .nav-container .navigate .social i:hover {
+  color: var(--secondary-color);
+}
+
+/* Section */
+.sec-container .sec-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.sec-container .sec-content .content1 {
+  width: 319.98px;
+  height: 319.98px;
+  background: var(--dark-color);
+}
+
+.sec-container .sec-content .content1 img {
+  height: 319.93px;
+}
+
+.sec-container .sec-content .content1 h4 {
+  position: absolute;
+  top: 30px;
+  left: 20px;
+  border-top: 3px var(--secondary-color) solid;
+}
+
+.sec-container .sec-content .content1 p {
+  position: absolute;
+  top: 60px;
+  left: 20px;
+  font-size: 24px;
+}
+
+.sec-container .sec-content .content1 img:hover {
+  opacity: 0.4;
+}
+
+.sec-container .sec-content .content1 a:hover {
+  color: var(--light-colour);
+}
+
+.sec-container .sec-content .content2 {
+  width: 319.98px;
+  height: 454.45px;
+  top: 0;
+  left:100px;
+  background: var(--dark-color);
+}
+
+.sec-container .sec-content .content2 img {
+  height: 454.45px;
+}
+
+.sec-container .sec-content .content2 h4 {
+  position: absolute;
+  top: 30px;
+  right: 540px;
+  border-top: 3px var(--secondary-color) solid;
+}
+
+.sec-container .sec-content .content2 p {
+  position: absolute;
+  top: 60px;
+  right: 371px;
+  font-size: 22px;
+  padding-left: 5px;
+}
+
+.sec-container .sec-content .content2 img:hover {
+  opacity: 0.4;
+}
+
+.sec-container .sec-content .content2 a:hover {
+  color: var(--light-colour);
+}
+
+.sec-container .sec-content .content3 {
+  width: 319.98px;
+  height: 284.64px;
+  top: 0;
+  left:100px;
+  background: var(--dark-color);
+}
+
+.sec-container .sec-content .content3 img {
+  height: 284.64px;
+}
+
+.sec-container .sec-content .content3 h4 {
+  position: absolute;
+  top: 30px;
+  right: 220px;
+  border-top: 3px var(--secondary-color) solid;
+}
+
+.sec-container .sec-content .content3 p {
+  position: absolute;
+  top: 60px;
+  left: 655px;
+  font-size: 24px;
+  padding-right: 10px;
+}
+
+.sec-container .sec-content .content3 img:hover {
+  opacity: 0.4;
+}
+
+.sec-container .sec-content .content3 a:hover {
+  color: var(--light-colour);
+}
+
+.sec-container .sec-content .content4 {
+  width: 319.98px;
+  height: 319.98px;
+  background: var(--dark-color);
+  position: absolute;
+  top: 320px;
+}
+
+.sec-container .sec-content .content4 img {
+  width: 319.98px;
+  height: 319.93px;
+  position: absolute;
+  top: 0px;
+}
+
+.sec-container .sec-content .content4 h4 {
+  position: absolute;
+  top: 30px;
+  left: 20px;
+  border-top: 3px var(--secondary-color) solid;
+}
+
+.sec-container .sec-content .content4 p {
+  position: absolute;
+  top: 60px;
+  left: 20px;
+  font-size: 24px;
+}
+
+.sec-container .sec-content .content4 img:hover {
+  opacity: 0.4;
+}
+
+.sec-container .sec-content .content4 a:hover {
+  color: var(--light-colour);
+}
+
+.sec-container .sec-content .content5 {
+  width: 319.98px;
+  height: 285.16px;
+  position: absolute;
+  top: 453px;
+  left: 320px;
+  background: var(--dark-color);
+}
+
+.sec-container .sec-content .content5 img {
+  height: 285.16px;
+}
+
+.sec-container .sec-content .content5 h4 {
+  position: absolute;
+  top: 30px;
+  left: 20px;
+  border-top: 3px var(--secondary-color) solid;
+}
+
+.sec-container .sec-content .content5 p {
+  position: absolute;
+  top: 60px;
+  left: 20px;
+  font-size: 22px;
+}
+
+.sec-container .sec-content .content5 img:hover {
+  opacity: 0.4;
+}
+
+.sec-container .sec-content .content5 a:hover {
+  color: var(--light-colour);
+}
+
+.sec-container .sec-content .content6 {
+  width: 319.98px;
+  height: 284.64px;
+  position: absolute;
+  top: 285px;
+  left: 640px;
+  background: var(--dark-color);
+}
+
+.sec-container .sec-content .content6 img {
+  height: 284.64px;
+}
+
+.sec-container .sec-content .content6 h4 {
+  position: absolute;
+  top: 30px;
+  right: 220px;
+  border-top: 3px var(--secondary-color) solid;
+}
+
+.sec-container .sec-content .content6 p {
+  position: absolute;
+  top: 60px;
+  right: 170px;
+  font-size: 22px;
+}
+
+.sec-container .sec-content .content6 img:hover {
+  opacity: 0.4;
+}
+
+.sec-container .sec-content .content6 a:hover {
+  color: var(--light-colour);
+}
+
+.sec-container .sec-content .content7 {
+  width: 319.98px;
+  height: 384.81px;
+  background: var(--dark-color);
+  position: absolute;
+  top: 640px;
+}
+
+.sec-container .sec-content .content7 img {
+  width: 319.98px;
+  height: 384.81px;
+  position: absolute;
+  top: 0px;
+}
+
+.sec-container .sec-content .content7 h4 {
+  position: absolute;
+  top: 30px;
+  left: 20px;
+  border-top: 3px var(--secondary-color) solid;
+}
+
+.sec-container .sec-content .content7 p {
+  position: absolute;
+  top: 60px;
+  left: 20px;
+  font-size: 24px;
+}
+
+.sec-container .sec-content .content7 img:hover {
+  opacity: 0.4;
+}
+
+.sec-container .sec-content .content7 a:hover {
+  color: var(--light-colour);
+}
+
+.sec-container .sec-content .content8 {
+  width: 319.98px;
+  height: 287.16px;
+  position: absolute;
+  top: 738px;
+  left: 320px;
+  background: var(--dark-color);
+}
+
+.sec-container .sec-content .content8 img {
+  height: 287.16px;
+}
+
+.sec-container .sec-content .content8 h4 {
+  position: absolute;
+  top: 30px;
+  left: 20px;
+  border-top: 3px var(--secondary-color) solid;
+}
+
+.sec-container .sec-content .content8 p {
+  position: absolute;
+  top: 60px;
+  left: 20px;
+  font-size: 22px;
+}
+
+.sec-container .sec-content .content8 img:hover {
+  opacity: 0.4;
+}
+
+.sec-container .sec-content .content8 a:hover {
+  color: var(--light-colour);
+}
+
+.sec-container .sec-content .content9 {
+  width: 319.98px;
+  height: 467.45px;
+  position: absolute;
+  top: 558px;
+  left: 640px;
+  background: var(--dark-color);
+}
+
+.sec-container .sec-content .content9 img {
+  height: 467.45px;
+}
+
+.sec-container .sec-content .content9 h4 {
+  position: absolute;
+  top: 30px;
+  right: 220px;
+  border-top: 3px var(--secondary-color) solid;
+}
+
+.sec-container .sec-content .content9 p {
+  position: absolute;
+  top: 60px;
+  left: 19px;
+  font-size: 22px;
+  padding-right: 20px;
+}
+
+.sec-container .sec-content .content9 img:hover {
+  opacity: 0.4;
+}
+
+.sec-container .sec-content .content9 a:hover {
+  color: var(--light-colour);
+}
+
+/* Before Footer */
+.bf-container .bf-content {
+  display: grid;
+  grid-template-columns: 750px 200px;
+}
+
+.bf-container .bf-content .bf-text {
+  margin: 0 80px;
+  color: var(--light-colour);
+}
+
+.bf-container .bf-content .bf-text h3 {
+  font-size: 35px;
+  margin: 0 0 10px;
+}
+
+.bf-container .bf-content .bf-text h3 span {
+  color: var(--secondary-color);
+}
+
+.bf-container .bf-content .bf-input input[type='email'] {
+  position: absolute;
+  top: 130px;
+  width: 405px;
+  height: 50px;
+  font-size: 14px;
+  font-style: italic;
+  padding: 0 30px;
+}
+
+.bf-container .bf-content .bf-input input[type='submit'] {
+  position: absolute;
+  top: 130px;
+  right: 115px;
+  font-size: 14px;
+  padding: 17px 35px 14px 35px;
+  background: var(--primary-color);
+  border: 1px var(--primary-color) solid;
+  color: var(--light-colour);
+  cursor: pointer;
+  z-index: 1px;
+}
+
+.footer-container .footer-content {
+  width: 1140px;
+  height: 125px;
+  display: grid;
+  grid-template-columns: 500px 550px ;
+  grid-gap: 2rem;
+}
+
+.footer-container .footer-content .footer1 {
+  margin-left: 110px;
+  margin-top: 30px;
+}
+
+.footer-container .footer-content .footer1 img {
+  width: 307px;
+  height: 175px;
+}
+
+.footer-container .footer-content .footer1 h3 {
+  padding-left: 28px;
+  margin-top: -30px;
+  color: #ccc;
+  font-size: 12px;
+}
+
+.footer-container .footer-content .footer-nav {
+  padding: 130px 0;
+  text-transform: uppercase;
+}
+
+.footer-container .footer-content .footer-nav a {
+  text-align: center;
+  color: var(--light-colour);
+  margin-top: 65px;
+  padding: 30px 20px;
+}
+
+.footer-container .footer-content .footer-nav a:hover {
+  color: var(--secondary-color);
+}
